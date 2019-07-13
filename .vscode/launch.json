@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'rusty-scheduler'",
+      "cargo": {
+        "args": ["build", "--bin=rusty-scheduler", "--package=rusty-scheduler"],
+        "filter": {
+          "name": "rusty-scheduler",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'rusty-scheduler'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=rusty-scheduler",
+          "--package=rusty-scheduler"
+        ],
+        "filter": {
+          "name": "rusty-scheduler",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

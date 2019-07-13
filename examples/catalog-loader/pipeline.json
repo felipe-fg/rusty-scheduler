@@ -1,0 +1,17 @@
+{
+  "id": "catalog-loader",
+  "expression": "30 0,4,8,16,20 * * *",
+  "stages": ["download", "import"],
+  "jobs": [
+    {
+      "id": "download-catalog",
+      "stage": "download",
+      "script": "download-catalog.sh"
+    },
+    {
+      "id": "import-catalog",
+      "stage": "import",
+      "script": "import-catalog.sh"
+    }
+  ]
+}

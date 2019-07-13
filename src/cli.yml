@@ -1,0 +1,25 @@
+name: rusty-scheduler
+version: "0.1.0"
+about: Job scheduler made with Rust.
+args:
+  - pipelines:
+      short: p
+      long: pipelines
+      value_name: DIR
+      help: Sets the pipelines directory
+      takes_value: true
+      required: true
+  - refresh:
+      short: r
+      long: refresh
+      value_name: SECONDS
+      help: Sets the refresh interval
+      takes_value: true
+      required: true
+  - log:
+      short: l
+      long: log
+      value_name: LEVEL
+      help: Sets the log level
+      takes_value: true
+      required: true
